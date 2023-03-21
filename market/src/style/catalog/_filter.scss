@@ -1,0 +1,139 @@
+.filter {
+  padding-top: 78px;
+  max-width: 340px;
+
+  @include tablet {
+    display: none;
+    position: absolute;
+    background-color: $color-secondary;
+    top: 0;
+    right: 0;
+    z-index: 555;
+    padding: 14px 20px 26px;
+
+    &_show {
+      display: block;
+    }
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 30px;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 22px;
+      line-height: 27px;
+      justify-content: flex-end;
+
+      &:after {                        //элемьент справа от текста
+        content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        background-image: url('img/arrow-v.svg');
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__fields-list {
+    margin-bottom: 40px;
+  }
+
+  &__field {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__field-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  &__flex {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+
+    &_column {
+      flex-direction: column;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__input {
+    width: 165px;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid $color-primary;
+    height: 38px;
+
+    @include laptop {
+      width: 145px;
+    }
+
+    &_select {
+      width: 100%;
+      color: $color-grey;
+    }
+
+    &::placeholder{
+      color: $color-grey;
+    }
+  }
+
+  &__checkbox {
+    margin-right: 10px;
+  }
+
+  &__apply {
+    margin: 0 auto;
+    display: block;
+    background-color: $color-primary;
+    color: $color-secondary;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 8px 20px;
+    border: none;
+
+    @include tablet {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__reset {
+    position: absolute;
+    top: 5px;
+    right: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-grey;
+    background-color: transparent;
+    border: 0;
+
+    @include tablet {
+      position: static;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

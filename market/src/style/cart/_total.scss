@@ -1,0 +1,142 @@
+.total {
+
+  @include mobile {
+    position: relative;
+    left: -10px;
+    width: 320px;
+    border-width: 1px 0;
+    border-color: $color-grey;
+    border-style: solid;
+    border-radius: 0;
+    padding: 15px 10px 25px;
+  }
+
+  &__wrapper {
+    border: 1px solid $color-grey;
+    border-radius: 20px;
+    padding: 40px 20px;
+
+    @include laptop {
+      max-width: 494px;
+      margin: 0 auto;
+    }
+
+    @include mobile {
+      border-width: 0;
+      padding: 0;
+    }
+  }
+
+  &__table {
+    margin-bottom: 50px;
+
+    @include mobile {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+
+    @include mobile {
+      margin-bottom: 10px;
+      padding: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &_header {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid $color-grey-light;
+      margin-bottom: 27px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      @include mobile {
+        position: relative;
+        left: -10px;
+        width: 320px;
+        padding-bottom: 4px;
+        margin-bottom: 14px;
+      }
+    }
+
+    &_grey {
+      color: $color-grey;
+    }
+
+    &_gap {
+      margin-bottom: 40px;
+
+      @include mobile {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &__order {
+    display: flex;
+    gap: 17px;
+    justify-content: space-between;
+
+    @include desktop {
+      flex-wrap: wrap;
+      max-width: 352px;
+      margin: 0 auto;
+    }
+  }
+
+  &__submit {
+    flex-basis: 352px;
+    height: 57px;
+    color: $color-secondary;
+    background-color: $color-main;
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    transition: color 0.36s ease-in-out;
+
+    &:hover {
+      color: $color-main-dark;
+    }
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__agree {
+    flex-basis: 292px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-grey;
+  }
+
+  &__agree-link {
+    color: $color-primary;
+    transition: color 0.36s ease-in-out;
+
+    &:hover {
+      color: $color-main;
+    }
+  }
+
+}

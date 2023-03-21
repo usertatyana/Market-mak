@@ -1,0 +1,116 @@
+.header {
+  padding: 26px 0;
+
+  @include mobile {
+    padding: 15px 0;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 32px;
+
+    @include desktop {
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+    @include laptop {
+      grid-template-columns: 1fr 3fr 2fr;
+    }
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    @include mobile {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo-link {
+    justify-self: start;
+  }
+
+  &__logo {
+    display: block;
+
+    @include mobile {
+      width: 56px;
+    }
+  }
+
+  &__search {
+    justify-self: center;
+    max-width: 818px;
+
+    @include desktop {
+      justify-self: start;
+      max-width: 600px;
+    }
+
+    @include laptop {
+      max-width: 100%;
+    }
+
+    @include tablet {
+      order: 1;
+      grid-column: 2 span;
+    }
+  }
+
+  &__nav {
+    justify-self: end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 330px;
+    width: 100%;
+
+    @include mobile {
+      max-width: 212px;
+    }
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    transition: color 0.36s ease-in-out;
+
+    &:hover {
+      color: $color-main;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+  &__cart {
+    position: relative;
+
+    &:after {
+      content: attr(data-count);
+      font-size: 14px;
+      display: flex;
+      align-items: center;justify-content: center;
+      border-radius:50%;
+      background-color: $color-main;
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      right: -8px;
+      bottom: -8px;
+    }
+
+    transition: color 0.36s ease-in-out;
+
+    &:hover {
+      color: $color-main;
+    }
+  }
+}

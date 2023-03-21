@@ -1,0 +1,161 @@
+.item {
+  display: flex;
+  align-items: flex-start;
+
+  @include mobile {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 18px;
+    gap: 20px 18px;
+  }
+
+  &__img {
+    width: 200px;
+    object-fit: cover;
+    margin-right: 30px;
+
+    @include desktop {
+      width: 137px;
+      margin-right: 8px;
+    }
+
+    @include tablet {
+      width: 104px;
+      margin-right: 18px;
+    }
+
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+
+  &__detail {
+    flex-basis: 353px;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 28px;
+
+    @include desktop {
+      flex-basis: 320px;
+    }
+
+    @include tablet {
+      flex-basis: 160px;
+      margin-right: 7px;
+      padding-top: 0;
+    }
+
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    min-height: 54px;
+    margin-bottom: 14px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+
+    @include desktop {
+      min-height: auto;
+    }
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__vendor-code {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+    @include tablet {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__control {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: 10px;
+
+    @include mobile {
+      justify-content: flex-start;
+      gap: 39px;
+    }
+  }
+
+  &__count {
+    max-width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid $color-primary;
+    background-color: transparent;
+    font-size: 30px;
+    line-height: 100%;
+    transition: color 0.36s ease-in-out;
+
+    &:hover {
+      color: $color-main-sub;
+    }
+  }
+
+  &__number {
+    font-size: 30px;
+    line-height: 37px;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    white-space: nowrap;
+  }
+
+  &__remove-cart {
+    min-width: 32px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    color: $color-grey-light;
+    transition: color 0.36s ease-in-out;
+
+    &:hover {
+      color: $color-main;
+    }
+
+    @include mobile {
+      min-width: 18px;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: 2px;
+      right: 0;
+    }
+  }
+}

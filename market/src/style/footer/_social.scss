@@ -1,0 +1,9 @@
+.social {
+  display: flex;
+  gap: 20px;
+  transition: color 0.36s ease-in-out;
+
+  &:hover {
+    color: $color-main;
+  }
+}
